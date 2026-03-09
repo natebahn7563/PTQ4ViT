@@ -6,7 +6,10 @@ PTQ4ViT - DeiT-Small W8A8 Quantization
 
 import sys
 import os
+
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+os.environ["TORCH_SDPA_ENABLE_FLASH_ATTENTION"] = "0"
 
 import torch
 import timm
